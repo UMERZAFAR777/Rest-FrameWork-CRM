@@ -54,7 +54,7 @@ class LoginForm(APIView):
 
 class ProfileForm(APIView):
     permission_classes = [IsAuthenticated]
-    def post(sellf,request):
+    def post(self,request):
         serializer = ProfileSerializer(request.user)
       
         return Response( serializer.data, status=status.HTTP_200_OK)
